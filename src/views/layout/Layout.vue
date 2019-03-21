@@ -41,8 +41,8 @@ export default class Layout extends mixins(ResizeMixin) {
 
   get otherSideObj(){
     return {
-      hideOtherSide: !this.otherside.opened,
-      openOtherSide: this.otherside.opened,
+      hideOtherSide: !this.otherSide.opened,
+      openOtherSide: this.otherSide.opened,
       divOverOtherSide: true,
     }
   }
@@ -112,7 +112,7 @@ export default class Layout extends mixins(ResizeMixin) {
     height: 100vh;
     position: absolute;
     font-size: 0px;
-    top: $navHeight + 5px;
+    top: $navHeight +5px;
     bottom: 0;
     right: 0;
     z-index: 999;

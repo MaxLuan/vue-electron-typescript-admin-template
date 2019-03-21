@@ -33,6 +33,7 @@ import { Route } from 'vue-router';
 import { isExternal } from '@/utils/validate';
 import { Component, Vue, Prop } from 'vue-property-decorator';
 import AppLink from './Link.vue';
+import { resolvePath } from '@/utils/misc.ts';
 
 @Component({
   // Set 'name' here to prevent uglifyjs from causing recursive component not work
@@ -79,7 +80,10 @@ export default class SidebarItem extends Vue {
     if (isExternal(routePath)) {
       return routePath;
     }
-    return path.resolve(this.basePath, routePath);
+
+    let resolved = resolvePath(this.basePath, routePath);
+    console.log(this.basePath, routePath, resolved)
+    return resolved
   }
 }
 </script>

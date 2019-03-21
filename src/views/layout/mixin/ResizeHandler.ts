@@ -13,6 +13,10 @@ export default class ResizeHandlerMixin extends Vue {
     return AppModule.sidebar;
   }
 
+  get otherSide(){
+    return AppModule.otherside;
+  }
+
   @Watch('$route')
   private OnRouteChange() {
     if (this.device === DeviceType.Mobile && this.sidebar.opened) {

@@ -28,7 +28,7 @@ class App extends VuexModule implements IAppState {
 
   public otherside = {
     opened: Cookies.get('othersideStatus') !== 'closed',
-    withoutAnimation: false
+    withoutAnimation: false,
   }
 
   public device = DeviceType.Desktop;

@@ -28,6 +28,7 @@ export default class SideBar extends Vue {
   @Prop({ default: false }) private collapse!: boolean;
 
   get sidebar() {
+    console.log((this.$router as any).options.routes);
     return AppModule.sidebar;
   }
 
